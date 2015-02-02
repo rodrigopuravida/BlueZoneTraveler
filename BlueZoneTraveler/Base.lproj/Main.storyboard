@@ -5,10 +5,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MapViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -23,16 +23,6 @@
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Jg-Fr-pim">
                                 <rect key="frame" x="0.0" y="537" width="600" height="63"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Bjt-nK-C1v">
-                                        <rect key="frame" x="259" y="21" width="82" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="Cyo-it-g5V"/>
-                                            <constraint firstAttribute="width" constant="46" id="Q1z-tf-SG2"/>
-                                        </constraints>
-                                        <state key="normal" title="Blue Zone 2">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="QAt-hv-j9n">
                                         <rect key="frame" x="28" y="21" width="82" height="30"/>
                                         <constraints>
@@ -42,6 +32,22 @@
                                         <state key="normal" title="Blue Zone 1">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="blueZone1Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yN5-S4-U6c"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Bjt-nK-C1v">
+                                        <rect key="frame" x="259" y="21" width="82" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Cyo-it-g5V"/>
+                                            <constraint firstAttribute="width" constant="46" id="Q1z-tf-SG2"/>
+                                        </constraints>
+                                        <state key="normal" title="Blue Zone 2">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="blueZone2Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cIk-VJ-oCT"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="4jO-0a-hTY">
                                         <rect key="frame" x="490" y="21" width="82" height="30"/>
@@ -52,6 +58,9 @@
                                         <state key="normal" title="Blue Zone 3">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="blueZone3Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WnH-Ws-tCM"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.92156869173049927" green="0.98431378602981567" blue="0.21176472306251526" alpha="1" colorSpace="deviceRGB"/>

@@ -15,6 +15,7 @@
 		48D2ABAA1A80202900AAC8D6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48D2ABA81A80202900AAC8D6 /* LaunchScreen.xib */; };
 		48D2ABB61A80202900AAC8D6 /* BlueZoneTravelerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D2ABB51A80202900AAC8D6 /* BlueZoneTravelerTests.m */; };
 		48D2ABC01A80204700AAC8D6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48D2ABBF1A80204700AAC8D6 /* MapKit.framework */; };
+		48D2ABC31A80267900AAC8D6 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D2ABC21A80267900AAC8D6 /* MapViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,8 @@
 		48D2ABB41A80202900AAC8D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48D2ABB51A80202900AAC8D6 /* BlueZoneTravelerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlueZoneTravelerTests.m; sourceTree = "<group>"; };
 		48D2ABBF1A80204700AAC8D6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		48D2ABC11A80267900AAC8D6 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		48D2ABC21A80267900AAC8D6 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +93,8 @@
 				48D2ABA01A80202800AAC8D6 /* ViewController.h */,
 				48D2ABA11A80202800AAC8D6 /* ViewController.m */,
 				48D2ABA31A80202900AAC8D6 /* Main.storyboard */,
+				48D2ABC11A80267900AAC8D6 /* MapViewController.h */,
+				48D2ABC21A80267900AAC8D6 /* MapViewController.m */,
 				48D2ABA61A80202900AAC8D6 /* Images.xcassets */,
 				48D2ABA81A80202900AAC8D6 /* LaunchScreen.xib */,
 				48D2AB991A80202800AAC8D6 /* Supporting Files */,
@@ -231,6 +236,7 @@
 				48D2ABA21A80202800AAC8D6 /* ViewController.m in Sources */,
 				48D2AB9F1A80202800AAC8D6 /* AppDelegate.m in Sources */,
 				48D2AB9C1A80202800AAC8D6 /* main.m in Sources */,
+				48D2ABC31A80267900AAC8D6 /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

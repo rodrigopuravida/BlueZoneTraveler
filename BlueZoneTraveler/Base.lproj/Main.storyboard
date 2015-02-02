@@ -20,13 +20,20 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="0V6-So-hCf">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </mapView>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Jg-Fr-pim">
+                                <rect key="frame" x="0.0" y="545" width="600" height="55"/>
+                                <color key="backgroundColor" red="0.92156869173049927" green="0.98431378602981567" blue="0.21176472306251526" alpha="1" colorSpace="deviceRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="0V6-So-hCf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="3We-eg-7WH"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0V6-So-hCf" secondAttribute="trailing" constant="-16" id="9bb-n4-675"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8Jg-Fr-pim" secondAttribute="trailing" constant="-16" id="DmU-Jm-FyG"/>
                             <constraint firstItem="0V6-So-hCf" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="OG5-sV-4dX"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0V6-So-hCf" secondAttribute="bottom" id="YUX-2z-Grr"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8Jg-Fr-pim" secondAttribute="bottom" id="gP6-w9-eUl"/>
+                            <constraint firstItem="8Jg-Fr-pim" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="lAe-lJ-13D"/>
                         </constraints>
                     </view>
                 </viewController>

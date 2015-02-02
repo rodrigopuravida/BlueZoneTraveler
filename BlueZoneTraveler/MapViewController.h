@@ -9,8 +9,6 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 
-MKMapView *mapView;
-
 @interface MapViewController : UIViewController
 
 @end

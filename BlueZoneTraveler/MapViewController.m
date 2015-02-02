@@ -9,11 +9,27 @@
 #import "MapViewController.h"
 #import <MapKit/MapKit.h>
 
+@interface MapViewController ()
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
+
+@end
+
 @implementation MapViewController
+
 
 - (IBAction)blueZone1Pressed:(id)sender {
     
     NSLog(@"Blue Zone1 clicked");
+    
+    self.mapView.mapType = MKMapTypeHybrid;
+    
+    CLLocationCoordinate2D coord = {.latitude =  61.2180556, .longitude =  -149.9002778};
+    MKCoordinateSpan span = {.latitudeDelta =  0.2, .longitudeDelta =  0.2};
+    MKCoordinateRegion region = {coord, span};
+    
+    [self.mapView setRegion:region];
+    [self.view addSubview:self.mapView];
+
    
     
 }
@@ -33,15 +49,15 @@
     
     [super viewDidLoad];
     
-    mapView = [[MKMapView alloc] initWithFrame:self.view.frame];
-    mapView.mapType = MKMapTypeHybrid;
-    
-    CLLocationCoordinate2D coord = {.latitude =  61.2180556, .longitude =  -149.9002778};
-    MKCoordinateSpan span = {.latitudeDelta =  0.2, .longitudeDelta =  0.2};
-    MKCoordinateRegion region = {coord, span};
-    
-    [mapView setRegion:region];
-    [self.view addSubview:mapView];
+//    mapView = [[MKMapView alloc] initWithFrame:self.view.frame];
+//    mapView.mapType = MKMapTypeHybrid;
+//    
+//    CLLocationCoordinate2D coord = {.latitude =  61.2180556, .longitude =  -149.9002778};
+//    MKCoordinateSpan span = {.latitudeDelta =  0.2, .longitudeDelta =  0.2};
+//    MKCoordinateRegion region = {coord, span};
+//    
+//    [mapView setRegion:region];
+//    [self.view addSubview:mapView];
     
 }
 

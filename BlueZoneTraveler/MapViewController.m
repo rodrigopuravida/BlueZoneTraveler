@@ -95,6 +95,7 @@
     //MARK: END BLUE ZONE BUTTONS =================================================
 
 }
+    //MARK: VIEWDIDLOAD ===========================================================
 
 - (void)viewDidLoad {
     
@@ -104,6 +105,35 @@
     self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.delegate = self;
     self.mapView.delegate = self;
+    
+    if ([CLLocationManager locationServicesEnabled]) {
+        
+        NSLog(@"current status is %d", [CLLocationManager authorizationStatus]);
+        
+        if ([CLLocationManager authorizationStatus] == 0) {
+            [self.locationManager requestAlwaysAuthorization];
+            
+        } else {
+            self.mapView.showsUserLocation = true;
+            [self.locationManager startUpdatingLocation];
+            //[self.locationManager startMonitoringSignificantLocationChanges];
+        }
+    } else {
+        //warn the user that location services are not currently enabled
+    }
+    
+    //MARK: END VIEWDIDLOAD
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     //MARK: STACK CASES =================================================
@@ -159,12 +189,23 @@
     
 }
 
-//- (void)dealloc {
-//    
-//    [super dealloc];
-//    
-//}
 
+-(void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
+    
+    NSLog(@" the new status is %d", status);
+}
+
+-(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
+    CLLocation *location = locations.firstObject;
+    NSLog(@"latitide: %f and longitude: %f",location.coordinate.latitude, location.coordinate.longitude);
+}
+
+-(void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
+    UIAlertView *errorAlert = [[UIAlertView alloc]initWithTitle:@"Error" message:@"There was an error retrieving your location" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    [errorAlert show];
+    NSLog(@"Error: %@",error.description);
+}
+}
 
 @end
 

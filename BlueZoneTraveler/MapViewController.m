@@ -10,9 +10,11 @@
 #import <MapKit/MapKit.h>
 #import "Stack.h"
 #import "Queue.h"
+#import <CoreLocation/CoreLocation.h>
 
-@interface MapViewController ()
+@interface MapViewController () <CLLocationManagerDelegate, MKMapViewDelegate>
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@property (strong,nonatomic) CLLocationManager *locationManager;
 
 @end
 
@@ -21,6 +23,7 @@
 //we are only doing this because we have custom setter and getter for this property
 
 
+//MARK: BLUE ZONE BUTTONS =================================================
 //TODO: Combine all 3 methods into one
 
 - (IBAction)blueZone1Pressed:(id)sender {
@@ -88,6 +91,8 @@
     [self.mapView setRegion:region animated:YES];
     
     [self.view addSubview:self.mapView];
+    
+    //MARK: END BLUE ZONE BUTTONS =================================================
 
 }
 
@@ -95,6 +100,13 @@
     
     [super viewDidLoad];
     
+    //Core Location Area
+    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.delegate = self;
+    self.mapView.delegate = self;
+    
+    
+    //MARK: STACK CASES =================================================
     //Stack cases here
     NSLog(@"STACK Tests");
     Stack *s1 = [[Stack alloc] init];
@@ -116,6 +128,7 @@
     NSLog(@"second set of tests passed");
 
     
+    //MARK: QUEUE CASES =================================================
     //Call the Queue stuff here
     
     NSLog(@"QUEUE Tests");

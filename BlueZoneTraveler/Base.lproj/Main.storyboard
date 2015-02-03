@@ -79,11 +79,30 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="mapView" destination="0V6-So-hCf" id="aIc-xD-yv1"/>
+                        <segue destination="TtD-bD-Xps" kind="show" identifier="SHOW_DETAIL" id="TG5-Ma-KxF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="856" y="287"/>
+        </scene>
+        <!--Add Reminder Detail View Controller-->
+        <scene sceneID="dwv-FI-HIm">
+            <objects>
+                <viewController id="TtD-bD-Xps" customClass="AddReminderDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IBQ-8R-zDd"/>
+                        <viewControllerLayoutGuide type="bottom" id="XQ2-vL-dAX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LIZ-Lu-5UR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JEC-EF-9vF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1565" y="182"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Sfl-1c-oWc">

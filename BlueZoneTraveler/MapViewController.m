@@ -122,19 +122,12 @@
         //warn the user that location services are not currently enabled
     }
     
-    //MARK: END VIEWDIDLOAD
-  
+    UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(mapLongPressed:)];
+    
+    [self.mapView addGestureRecognizer:longPress];
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
+   
     
     //MARK: STACK CASES =================================================
     //Stack cases here
@@ -179,7 +172,28 @@
     assert(![[s2 dequeue] isEqual:[NSNumber numberWithInt:3]]);
     assert(s2.isEmpty);
     NSLog(@"second set of tests passed");
+  
+}
 
+    //MARK: END VIEWDIDLOAD
+
+-(void)mapLongPressed:(id)sender {
+    
+    UILongPressGestureRecognizer *longPress = (UILongPressGestureRecognizer *)sender;
+    NSLog(@"long press fired");
+    if (longPress.state == 3 ) {
+        NSLog(@"long press ended");
+        CGPoint location = [longPress locationInView:self.mapView];
+        NSLog(@"location y: %f location x: %f",location.y, location.x);
+        CLLocationCoordinate2D coordinates = [self.mapView convertPoint:location toCoordinateFromView:self.mapView];
+        NSLog(@"coordinate long: %f coordinate lat x: %f",coordinates.longitude, coordinates.latitude);
+        
+        MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
+        annotation.coordinate = coordinates;
+        annotation.title = @"New Blue Zone?";
+        [self.mapView addAnnotation:annotation];
+    }
+    
     
 }
 
@@ -204,6 +218,24 @@
     UIAlertView *errorAlert = [[UIAlertView alloc]initWithTitle:@"Error" message:@"There was an error retrieving your location" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
     [errorAlert show];
     NSLog(@"Error: %@",error.description);
+}
+
+-(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
+    MKPinAnnotationView *annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"AnnotationView"];
+    annotationView.animatesDrop = true;
+    annotationView.pinColor = MKPinAnnotationColorPurple;
+    annotationView.canShowCallout = true;
+    annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeContactAdd];
+    
+    return annotationView;
+}
+
+-(void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
+    MKPointAnnotation *annotation = view.annotation;
+    
+    [self performSegueWithIdentifier:@"SHOW_DETAIL" sender:self];
+    
+    NSLog(@"button tapped");
 }
 
 

@@ -9,6 +9,7 @@
 #import "MapViewController.h"
 #import <MapKit/MapKit.h>
 #import "Stack.h"
+#import "Queue.h"
 
 @interface MapViewController ()
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
@@ -95,10 +96,9 @@
     [super viewDidLoad];
     
     //Stack cases here
+    NSLog(@"STACK Tests");
     Stack *s1 = [[Stack alloc] init];
     assert([s1 size]==0);
-    assert([s1 pop]==nil);
-    assert([s1 peek]==nil);
     assert([s1 isEmpty]==YES);
     NSLog(@"first set of tests passed");
     [s1 push:[NSNumber numberWithInt:0]];
@@ -116,7 +116,27 @@
     NSLog(@"second set of tests passed");
 
     
-    //Call the Quue stuff here
+    //Call the Queue stuff here
+    
+    NSLog(@"QUEUE Tests");
+    
+    Queue *s2 = [[Queue alloc] init];
+    assert([s2 size]==0);
+    //assert([s2 isEmpty]==YES);
+    NSLog(@"first set of tests passed");
+    [s2 enqueue:[NSNumber numberWithInt:0]];
+    [s2 enqueue:[NSNumber numberWithInt:3]];
+    [s2 enqueue:[NSNumber numberWithInt:5]];
+    assert(![s2 isEmpty]);
+    assert(s2.size == 3);
+    assert([[s2 peek] isEqual:[NSNumber numberWithInt:0]]);
+    assert([[s2 dequeue] isEqual:[NSNumber numberWithInt:0]]);
+    assert(s2.size == 2);
+    assert([[s2 dequeue] isEqual:[NSNumber numberWithInt:3]]);
+    assert(![[s2 dequeue] isEqual:[NSNumber numberWithInt:3]]);
+    assert(s2.isEmpty);
+    NSLog(@"second set of tests passed");
+
     
 }
 

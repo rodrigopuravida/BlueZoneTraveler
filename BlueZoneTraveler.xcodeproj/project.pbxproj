@@ -17,6 +17,7 @@
 		48D2ABC01A80204700AAC8D6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48D2ABBF1A80204700AAC8D6 /* MapKit.framework */; };
 		48D2ABC31A80267900AAC8D6 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D2ABC21A80267900AAC8D6 /* MapViewController.m */; };
 		48E5559D1A805880008E0B15 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E5559C1A805880008E0B15 /* Stack.m */; };
+		48E555A01A805EC3008E0B15 /* Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E5559F1A805EC3008E0B15 /* Queue.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,8 @@
 		48D2ABC21A80267900AAC8D6 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		48E5559B1A805880008E0B15 /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
 		48E5559C1A805880008E0B15 /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
+		48E5559E1A805EC3008E0B15 /* Queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Queue.h; path = BlueZoneTraveler/Queue.h; sourceTree = "<group>"; };
+		48E5559F1A805EC3008E0B15 /* Queue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Queue.m; path = BlueZoneTraveler/Queue.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +75,8 @@
 		48D2AB8D1A80202800AAC8D6 = {
 			isa = PBXGroup;
 			children = (
+				48E5559E1A805EC3008E0B15 /* Queue.h */,
+				48E5559F1A805EC3008E0B15 /* Queue.m */,
 				48E5559B1A805880008E0B15 /* Stack.h */,
 				48E5559C1A805880008E0B15 /* Stack.m */,
 				48D2ABBF1A80204700AAC8D6 /* MapKit.framework */,
@@ -241,6 +246,7 @@
 				48D2ABA21A80202800AAC8D6 /* ViewController.m in Sources */,
 				48D2AB9F1A80202800AAC8D6 /* AppDelegate.m in Sources */,
 				48D2AB9C1A80202800AAC8D6 /* main.m in Sources */,
+				48E555A01A805EC3008E0B15 /* Queue.m in Sources */,
 				48E5559D1A805880008E0B15 /* Stack.m in Sources */,
 				48D2ABC31A80267900AAC8D6 /* MapViewController.m in Sources */,
 			);

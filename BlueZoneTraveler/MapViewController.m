@@ -8,6 +8,7 @@
 
 #import "MapViewController.h"
 #import <MapKit/MapKit.h>
+#import "Stack.h"
 
 @interface MapViewController ()
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
@@ -15,6 +16,10 @@
 @end
 
 @implementation MapViewController
+
+//we are only doing this because we have custom setter and getter for this property
+
+
 //TODO: Combine all 3 methods into one
 
 - (IBAction)blueZone1Pressed:(id)sender {
@@ -29,15 +34,12 @@
     CLLocationCoordinate2D coord = {.latitude =  26.5000, .longitude =  128.0000};
     point.coordinate = coord;
     [self.mapView addAnnotation:point];
-    MKCoordinateSpan span = {.latitudeDelta =  0.5, .longitudeDelta =  0.5};
+    MKCoordinateSpan span = {.latitudeDelta =  0.8, .longitudeDelta =  0.8};
     
     MKCoordinateRegion region = {coord, span};
     
     [self.mapView setRegion:region animated:YES];
     
-
-    
-    //[self.mapView setRegion:region];
     [self.view addSubview:self.mapView];
 
 }
@@ -54,16 +56,13 @@
     point.coordinate = coord;
     [self.mapView addAnnotation:point];
     
-    MKCoordinateSpan span = {.latitudeDelta =  0.5, .longitudeDelta =  0.5};
+    MKCoordinateSpan span = {.latitudeDelta =  0.8, .longitudeDelta =  0.8};
     
     
     MKCoordinateRegion region = {coord, span};
     
     [self.mapView setRegion:region animated:YES];
     
-    
-    
-    //[self.mapView setRegion:region];
     [self.view addSubview:self.mapView];
 
 }
@@ -80,16 +79,13 @@
     [self.mapView addAnnotation:point];
     
     
-    MKCoordinateSpan span = {.latitudeDelta =  0.5, .longitudeDelta =  0.5};
+    MKCoordinateSpan span = {.latitudeDelta =  0.8, .longitudeDelta =  0.8};
     
     
     MKCoordinateRegion region = {coord, span};
     
     [self.mapView setRegion:region animated:YES];
     
-    
-    
-    //[self.mapView setRegion:region];
     [self.view addSubview:self.mapView];
 
 }
@@ -97,6 +93,30 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
+    
+    //Stack cases here
+    Stack *s1 = [[Stack alloc] init];
+    assert([s1 size]==0);
+    assert([s1 pop]==nil);
+    assert([s1 peek]==nil);
+    assert([s1 isEmpty]==YES);
+    NSLog(@"first set of tests passed");
+    [s1 push:[NSNumber numberWithInt:0]];
+    [s1 push:[NSNumber numberWithInt:3]];
+    [s1 push:[NSNumber numberWithInt:5]];
+    assert(![s1 isEmpty]);
+    assert(s1.size == 3);
+    assert([[s1 peek] isEqual:[NSNumber numberWithInt:5]]);
+    assert([[s1 pop] isEqual:[NSNumber numberWithInt:5]]);
+    assert(s1.size == 2);
+    assert([[s1 pop] isEqual:[NSNumber numberWithInt:3]]);
+    assert(![[s1 pop] isEqual:[NSNumber numberWithInt:3]]);
+    assert([s1 pop] == nil);
+    assert(s1.isEmpty);
+    NSLog(@"second set of tests passed");
+
+    
+    //Call the Quue stuff here
     
 }
 
@@ -114,3 +134,5 @@
 
 
 @end
+
+

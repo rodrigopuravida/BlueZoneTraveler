@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
+@class MyStack;
 
 @interface MapViewController : UIViewController
 
+
 @end
+
+

@@ -14,13 +14,24 @@
 
 @implementation AddReminderDetailViewController
 
-@synthesize annotation;
+//@synthesize annotation;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     NSLog(@"I'm at AddReminderDetailViewController");
-    NSLog(@"latitude: %f and longitude: %f received from MapView Controller", annotation.coordinate.latitude, annotation.coordinate.longitude);
+    NSLog(@"latitude: %f and longitude: %f received from MapView Controller", self.annotation.coordinate.latitude, self.annotation.coordinate.longitude);
+    
+}
+- (IBAction)pressedAddReminderButton:(id)sender {
+    
+    if ([CLLocationManager isMonitoringAvailableForClass:[CLCircularRegion class]]) {
+        CLCircularRegion *region = [[CLCircularRegion alloc] initWithCenter:self.annotation.coordinate radius:200 identifier:@"Reminder"];
+        [self.locationManager startMonitoringForRegion:region];
+        // NSDictionary *userInfo = @{@"reminder" : region};
+        
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"ReminderAdded" object:self userInfo:@{@"reminder" : region}];        
+    }
     
 }
 

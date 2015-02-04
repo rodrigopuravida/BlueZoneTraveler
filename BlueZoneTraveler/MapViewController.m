@@ -16,6 +16,7 @@
 @interface MapViewController () <CLLocationManagerDelegate, MKMapViewDelegate>
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (strong,nonatomic) CLLocationManager *locationManager;
+//@property (strong, nonatomic) MKPointAnnotation *selectedAnnotation;
 
 @end
 
@@ -101,6 +102,9 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
+    
+    //this is for Notification Center so that when I leave a region an overlay will be displayed on pin exited
+     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reminderAdded:) name:@"ReminderAdded" object:nil];
     
     //Core Location Area
     self.locationManager = [[CLLocationManager alloc] init];
@@ -234,8 +238,6 @@
 -(void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
     MKPointAnnotation *annotation = view.annotation;
     
-    //[self performSegueWithIdentifier:@"SHOW_DETAIL" sender:self];
-    
     //Since we are not using segue identifier and is in storyboard need to instantiate with Identifier
     //AddReminderDetailViewController *reminderController = [[AddReminderDetailViewController alloc] init];
     AddReminderDetailViewController *reminderController = [self.storyboard instantiateViewControllerWithIdentifier:@"REMINDER"];
@@ -247,17 +249,30 @@
     NSLog(@"button tapped");
 }
 
--(void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view {
-    //This I don't need
-    
-}
 
+//I could do it this way too
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
 //    if ([segue.identifier isEqualToString:@"SHOW_DETAIL"]) {
-//        MapViewController *transferViewController = segue.destinationViewController;
-//        AddReminderDetailViewController *destViewController = segue.destinationViewController;
+//        AddReminderDetailViewController *destViewController = (AddReminderDetailViewController *)segue.destinationViewController;
 //        destViewController.annotation = self.mapView.annotations[0];
 //    }
+}
+
+-(void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region {
+    NSLog(@"did enter region");
+    UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+    localNotification.alertBody = @"region entered!";
+    localNotification.alertAction = @"region action";
+    
+    [[UIApplication sharedApplication] presentLocalNotificationNow:localNotification];
+}
+
+-(void)locationManager:(CLLocationManager *)manager didExitRegion:(CLRegion *)region {
+    NSLog(@"did exit region");
+    UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+    localNotification.alertBody = @"region exited!";
+    localNotification.alertAction = @"region action";
+    
 }
 
 

@@ -14,6 +14,7 @@
 @interface AddReminderDetailViewController : UIViewController
 
 @property (strong, nonatomic) MKPointAnnotation *annotation;
+@property (strong,nonatomic) CLLocationManager *locationManager;
 
 
 

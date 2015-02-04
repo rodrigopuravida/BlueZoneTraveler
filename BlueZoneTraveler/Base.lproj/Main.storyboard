@@ -79,7 +79,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="mapView" destination="0V6-So-hCf" id="aIc-xD-yv1"/>
-                        <segue destination="TtD-bD-Xps" kind="show" identifier="SHOW_DETAIL" id="TG5-Ma-KxF"/>
+                        <segue destination="TtD-bD-Xps" kind="show" identifier="SHOW_DETAIL" id="39f-ei-NQU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -89,7 +89,7 @@
         <!--Add Reminder Detail View Controller-->
         <scene sceneID="dwv-FI-HIm">
             <objects>
-                <viewController id="TtD-bD-Xps" customClass="AddReminderDetailViewController" sceneMemberID="viewController">
+                <viewController restorationIdentifier="REMINDER" storyboardIdentifier="REMINDER" id="TtD-bD-Xps" customClass="AddReminderDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IBQ-8R-zDd"/>
                         <viewControllerLayoutGuide type="bottom" id="XQ2-vL-dAX"/>
@@ -97,6 +97,14 @@
                     <view key="view" contentMode="scaleToFill" id="LIZ-Lu-5UR">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Test" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6qr-BS-r11">
+                                <rect key="frame" x="194" y="227" width="200" height="107"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>

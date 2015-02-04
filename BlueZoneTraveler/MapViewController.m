@@ -234,7 +234,11 @@
 -(void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
     MKPointAnnotation *annotation = view.annotation;
     
-    AddReminderDetailViewController *reminderController = [[AddReminderDetailViewController alloc] init];
+    //[self performSegueWithIdentifier:@"SHOW_DETAIL" sender:self];
+    
+    //Since we are not using segue identifier and is in storyboard need to instantiate with Identifier
+    //AddReminderDetailViewController *reminderController = [[AddReminderDetailViewController alloc] init];
+    AddReminderDetailViewController *reminderController = [self.storyboard instantiateViewControllerWithIdentifier:@"REMINDER"];
     reminderController.annotation = annotation;
     NSLog(@"latitude: %f and longitude: %f to be passed to next controller", reminderController.annotation.coordinate.latitude, reminderController.annotation.coordinate.longitude);
         
@@ -246,6 +250,14 @@
 -(void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view {
     //This I don't need
     
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//    if ([segue.identifier isEqualToString:@"SHOW_DETAIL"]) {
+//        MapViewController *transferViewController = segue.destinationViewController;
+//        AddReminderDetailViewController *destViewController = segue.destinationViewController;
+//        destViewController.annotation = self.mapView.annotations[0];
+//    }
 }
 
 

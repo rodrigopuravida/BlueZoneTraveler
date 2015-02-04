@@ -11,6 +11,7 @@
 #import "Stack.h"
 #import "Queue.h"
 #import <CoreLocation/CoreLocation.h>
+#import "AddReminderDetailViewController.h"
 
 @interface MapViewController () <CLLocationManagerDelegate, MKMapViewDelegate>
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
@@ -233,10 +234,21 @@
 -(void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
     MKPointAnnotation *annotation = view.annotation;
     
-    [self performSegueWithIdentifier:@"SHOW_DETAIL" sender:self];
-    
+    AddReminderDetailViewController *reminderController = [[AddReminderDetailViewController alloc] init];
+    reminderController.annotation = annotation;
+    NSLog(@"latitude: %f and longitude: %f to be passed to next controller", reminderController.annotation.coordinate.latitude, reminderController.annotation.coordinate.longitude);
+        
+    [self presentViewController:reminderController animated:YES completion:nil];
+   
     NSLog(@"button tapped");
 }
+
+-(void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view {
+    //This I don't need
+    
+}
+
+
 
 
 @end

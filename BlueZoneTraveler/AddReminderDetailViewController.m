@@ -14,9 +14,14 @@
 
 @implementation AddReminderDetailViewController
 
+@synthesize annotation;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    NSLog(@"I'm at AddReminderDetailViewController");
+    NSLog(@"latitude: %f and longitude: %f received from MapView Controller", annotation.coordinate.latitude, annotation.coordinate.longitude);
+    
 }
 
 - (void)didReceiveMemoryWarning {

@@ -16,7 +16,7 @@
 @interface MapViewController () <CLLocationManagerDelegate, MKMapViewDelegate>
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (strong,nonatomic) CLLocationManager *locationManager;
-//@property (strong, nonatomic) MKPointAnnotation *selectedAnnotation;
+@property (strong, nonatomic) MKPointAnnotation *selectedAnnotation;
 
 @end
 
@@ -103,7 +103,7 @@
     
     [super viewDidLoad];
     
-    //this is for Notification Center so that when I leave a region an overlay will be displayed on pin exited
+    //this is for Notification Center so that when I leave a region an overlay will be displayed on pin exited//
      [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reminderAdded:) name:@"ReminderAdded" object:nil];
     
     //Core Location Area
@@ -120,8 +120,8 @@
             
         } else {
             self.mapView.showsUserLocation = true;
-            [self.locationManager startUpdatingLocation];
-            //[self.locationManager startMonitoringSignificantLocationChanges];
+            //[self.locationManager startUpdatingLocation];
+            [self.locationManager startMonitoringSignificantLocationChanges];
         }
     } else {
         //warn the user that location services are not currently enabled
@@ -199,8 +199,27 @@
         [self.mapView addAnnotation:annotation];
     }
     
-    
 }
+
+-(void) reminderAdded:(NSNotification *)notification {
+    NSLog(@"reminder notification");
+    NSDictionary *userInfo = notification.userInfo;
+    CLCircularRegion *region = userInfo[@"reminder"];
+    NSString *notificationName = notification.name;
+    
+    MKCircle *circleOverlay = [MKCircle circleWithCenterCoordinate:region.center radius:region.radius];
+    
+    [self.mapView addOverlay:circleOverlay];
+}
+
+-(MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id<MKOverlay>)overlay {
+    MKCircleRenderer *circleRenderer = [[MKCircleRenderer alloc] initWithOverlay:overlay];
+    circleRenderer.fillColor = [UIColor blueColor];
+    circleRenderer.strokeColor = [UIColor redColor];
+    circleRenderer.alpha = 0.5;
+    return circleRenderer;
+}
+
 
 - (void)didReceiveMemoryWarning {
     
@@ -236,26 +255,25 @@
 }
 
 -(void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
-    MKPointAnnotation *annotation = view.annotation;
+    self.selectedAnnotation = view.annotation;
     
     //Since we are not using segue identifier and is in storyboard need to instantiate with Identifier
-    //AddReminderDetailViewController *reminderController = [[AddReminderDetailViewController alloc] init];
-    AddReminderDetailViewController *reminderController = [self.storyboard instantiateViewControllerWithIdentifier:@"REMINDER"];
-    reminderController.annotation = annotation;
-    NSLog(@"latitude: %f and longitude: %f to be passed to next controller", reminderController.annotation.coordinate.latitude, reminderController.annotation.coordinate.longitude);
-        
-    [self presentViewController:reminderController animated:YES completion:nil];
+    //AddReminderDetailViewController *reminderController = [self.storyboard instantiateViewControllerWithIdentifier:@"REMINDER"];
+   
+    [self performSegueWithIdentifier:@"SHOW_DETAIL" sender:self];
    
     NSLog(@"button tapped");
 }
 
 
 //I could do it this way too
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-//    if ([segue.identifier isEqualToString:@"SHOW_DETAIL"]) {
-//        AddReminderDetailViewController *destViewController = (AddReminderDetailViewController *)segue.destinationViewController;
-//        destViewController.annotation = self.mapView.annotations[0];
-//    }
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"SHOW_DETAIL"]) {
+        AddReminderDetailViewController *addReminderVC = (AddReminderDetailViewController *)segue.destinationViewController;
+        addReminderVC.annotation = self.selectedAnnotation;
+        addReminderVC.locationManager = self.locationManager;
+        
+    }
 }
 
 -(void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region {
@@ -273,6 +291,10 @@
     localNotification.alertBody = @"region exited!";
     localNotification.alertAction = @"region action";
     
+}
+
+-(void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 

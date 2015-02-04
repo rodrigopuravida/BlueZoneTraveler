@@ -291,6 +291,9 @@
     localNotification.alertBody = @"region exited!";
     localNotification.alertAction = @"region action";
     
+    [[UIApplication sharedApplication] presentLocalNotificationNow:localNotification];
+
+    
 }
 
 -(void)dealloc {

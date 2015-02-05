@@ -104,6 +104,7 @@
     [super viewDidLoad];
     
     //this is for Notification Center so that when I leave a region an overlay will be displayed on pin exited//
+    //object is used to see which object is sending notifications.  If nil then from anyone.  Same for name parameter
      [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reminderAdded:) name:@"ReminderAdded" object:nil];
     
     //Core Location Area
@@ -288,19 +289,18 @@
 -(void)locationManager:(CLLocationManager *)manager didExitRegion:(CLRegion *)region {
     NSLog(@"did exit region");
     UILocalNotification *localNotification = [[UILocalNotification alloc] init];
-    localNotification.alertBody = @"region exited!";
+ 
+    localNotification.alertBody = @"region entered!";
     localNotification.alertAction = @"region action";
     
     [[UIApplication sharedApplication] presentLocalNotificationNow:localNotification];
 
     
 }
-
+//remove yourself - best practice
 -(void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
-
-
 
 
 @end

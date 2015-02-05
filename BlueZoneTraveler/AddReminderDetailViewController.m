@@ -30,6 +30,10 @@
         [self.locationManager startMonitoringForRegion:region];
         // NSDictionary *userInfo = @{@"reminder" : region};
         
+        //use this to return an array of monitored regions if needed
+        [self.locationManager.monitoredRegions allObjects];
+        
+        //you can pass into the dictionary other info also - but keep it light.
         [[NSNotificationCenter defaultCenter] postNotificationName:@"ReminderAdded" object:self userInfo:@{@"reminder" : region}];        
     }
     

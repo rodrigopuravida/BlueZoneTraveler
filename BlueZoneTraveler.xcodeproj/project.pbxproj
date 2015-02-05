@@ -20,6 +20,14 @@
 		48DE2E0C1A817EF8007E9CA4 /* AddReminderDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48DE2E0B1A817EF8007E9CA4 /* AddReminderDetailViewController.m */; };
 		48E5559D1A805880008E0B15 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E5559C1A805880008E0B15 /* Stack.m */; };
 		48E555A01A805EC3008E0B15 /* Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E5559F1A805EC3008E0B15 /* Queue.m */; };
+		48F96CA51A84072A003ABF5B /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F96CA41A84072A003ABF5B /* InterfaceController.m */; };
+		48F96CA81A84072A003ABF5B /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F96CA71A84072A003ABF5B /* NotificationController.m */; };
+		48F96CAB1A84072A003ABF5B /* GlanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F96CAA1A84072A003ABF5B /* GlanceController.m */; };
+		48F96CAD1A84072A003ABF5B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48F96CAC1A84072A003ABF5B /* Images.xcassets */; };
+		48F96CB11A84072B003ABF5B /* BlueZoneTraveler WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 48F96CB01A84072A003ABF5B /* BlueZoneTraveler WatchKit App.app */; };
+		48F96CB91A84072B003ABF5B /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48F96CB71A84072B003ABF5B /* Interface.storyboard */; };
+		48F96CBB1A84072B003ABF5B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48F96CBA1A84072B003ABF5B /* Images.xcassets */; };
+		48F96CBE1A84072B003ABF5B /* BlueZoneTraveler WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 48F96C9E1A84072A003ABF5B /* BlueZoneTraveler WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +38,35 @@
 			remoteGlobalIDString = 48D2AB951A80202800AAC8D6;
 			remoteInfo = BlueZoneTraveler;
 		};
+		48F96CB21A84072B003ABF5B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 48D2AB8E1A80202800AAC8D6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 48F96CAF1A84072A003ABF5B;
+			remoteInfo = "BlueZoneTraveler WatchKit App";
+		};
+		48F96CBC1A84072B003ABF5B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 48D2AB8E1A80202800AAC8D6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 48F96C9D1A84072A003ABF5B;
+			remoteInfo = "BlueZoneTraveler WatchKit Extension";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		48F96CC51A84072B003ABF5B /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				48F96CBE1A84072B003ABF5B /* BlueZoneTraveler WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		487C7AF61A8169D6009C555A /* Tasks */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Tasks; sourceTree = "<group>"; };
@@ -56,6 +92,21 @@
 		48E5559C1A805880008E0B15 /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
 		48E5559E1A805EC3008E0B15 /* Queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Queue.h; path = BlueZoneTraveler/Queue.h; sourceTree = "<group>"; };
 		48E5559F1A805EC3008E0B15 /* Queue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Queue.m; path = BlueZoneTraveler/Queue.m; sourceTree = "<group>"; };
+		48F96C9E1A84072A003ABF5B /* BlueZoneTraveler WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "BlueZoneTraveler WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		48F96CA11A84072A003ABF5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48F96CA21A84072A003ABF5B /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		48F96CA31A84072A003ABF5B /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		48F96CA41A84072A003ABF5B /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		48F96CA61A84072A003ABF5B /* NotificationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationController.h; sourceTree = "<group>"; };
+		48F96CA71A84072A003ABF5B /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
+		48F96CA91A84072A003ABF5B /* GlanceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlanceController.h; sourceTree = "<group>"; };
+		48F96CAA1A84072A003ABF5B /* GlanceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GlanceController.m; sourceTree = "<group>"; };
+		48F96CAC1A84072A003ABF5B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		48F96CB01A84072A003ABF5B /* BlueZoneTraveler WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BlueZoneTraveler WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		48F96CB61A84072B003ABF5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48F96CB81A84072B003ABF5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		48F96CBA1A84072B003ABF5B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		48F96CC61A840796003ABF5B /* BlueZoneTraveler.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = BlueZoneTraveler.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +119,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		48D2ABAC1A80202900AAC8D6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48F96C9B1A84072A003ABF5B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -87,6 +145,8 @@
 				48D2ABBF1A80204700AAC8D6 /* MapKit.framework */,
 				48D2AB981A80202800AAC8D6 /* BlueZoneTraveler */,
 				48D2ABB21A80202900AAC8D6 /* BlueZoneTravelerTests */,
+				48F96C9F1A84072A003ABF5B /* BlueZoneTraveler WatchKit Extension */,
+				48F96CB41A84072B003ABF5B /* BlueZoneTraveler WatchKit App */,
 				48D2AB971A80202800AAC8D6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -96,6 +156,8 @@
 			children = (
 				48D2AB961A80202800AAC8D6 /* BlueZoneTraveler.app */,
 				48D2ABAF1A80202900AAC8D6 /* BlueZoneTravelerTests.xctest */,
+				48F96C9E1A84072A003ABF5B /* BlueZoneTraveler WatchKit Extension.appex */,
+				48F96CB01A84072A003ABF5B /* BlueZoneTraveler WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -103,6 +165,7 @@
 		48D2AB981A80202800AAC8D6 /* BlueZoneTraveler */ = {
 			isa = PBXGroup;
 			children = (
+				48F96CC61A840796003ABF5B /* BlueZoneTraveler.entitlements */,
 				48D2AB9D1A80202800AAC8D6 /* AppDelegate.h */,
 				48D2AB9E1A80202800AAC8D6 /* AppDelegate.m */,
 				48D2ABA01A80202800AAC8D6 /* ViewController.h */,
@@ -146,6 +209,48 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		48F96C9F1A84072A003ABF5B /* BlueZoneTraveler WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				48F96CA31A84072A003ABF5B /* InterfaceController.h */,
+				48F96CA41A84072A003ABF5B /* InterfaceController.m */,
+				48F96CA61A84072A003ABF5B /* NotificationController.h */,
+				48F96CA71A84072A003ABF5B /* NotificationController.m */,
+				48F96CA91A84072A003ABF5B /* GlanceController.h */,
+				48F96CAA1A84072A003ABF5B /* GlanceController.m */,
+				48F96CAC1A84072A003ABF5B /* Images.xcassets */,
+				48F96CA01A84072A003ABF5B /* Supporting Files */,
+			);
+			path = "BlueZoneTraveler WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		48F96CA01A84072A003ABF5B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				48F96CA11A84072A003ABF5B /* Info.plist */,
+				48F96CA21A84072A003ABF5B /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		48F96CB41A84072B003ABF5B /* BlueZoneTraveler WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				48F96CB71A84072B003ABF5B /* Interface.storyboard */,
+				48F96CBA1A84072B003ABF5B /* Images.xcassets */,
+				48F96CB51A84072B003ABF5B /* Supporting Files */,
+			);
+			path = "BlueZoneTraveler WatchKit App";
+			sourceTree = "<group>";
+		};
+		48F96CB51A84072B003ABF5B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				48F96CB61A84072B003ABF5B /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -156,10 +261,12 @@
 				48D2AB921A80202800AAC8D6 /* Sources */,
 				48D2AB931A80202800AAC8D6 /* Frameworks */,
 				48D2AB941A80202800AAC8D6 /* Resources */,
+				48F96CC51A84072B003ABF5B /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				48F96CBD1A84072B003ABF5B /* PBXTargetDependency */,
 			);
 			name = BlueZoneTraveler;
 			productName = BlueZoneTraveler;
@@ -184,6 +291,39 @@
 			productReference = 48D2ABAF1A80202900AAC8D6 /* BlueZoneTravelerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		48F96C9D1A84072A003ABF5B /* BlueZoneTraveler WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 48F96CC41A84072B003ABF5B /* Build configuration list for PBXNativeTarget "BlueZoneTraveler WatchKit Extension" */;
+			buildPhases = (
+				48F96C9A1A84072A003ABF5B /* Sources */,
+				48F96C9B1A84072A003ABF5B /* Frameworks */,
+				48F96C9C1A84072A003ABF5B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				48F96CB31A84072B003ABF5B /* PBXTargetDependency */,
+			);
+			name = "BlueZoneTraveler WatchKit Extension";
+			productName = "BlueZoneTraveler WatchKit Extension";
+			productReference = 48F96C9E1A84072A003ABF5B /* BlueZoneTraveler WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		48F96CAF1A84072A003ABF5B /* BlueZoneTraveler WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 48F96CC31A84072B003ABF5B /* Build configuration list for PBXNativeTarget "BlueZoneTraveler WatchKit App" */;
+			buildPhases = (
+				48F96CAE1A84072A003ABF5B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BlueZoneTraveler WatchKit App";
+			productName = "BlueZoneTraveler WatchKit App";
+			productReference = 48F96CB01A84072A003ABF5B /* BlueZoneTraveler WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -195,7 +335,11 @@
 				TargetAttributes = {
 					48D2AB951A80202800AAC8D6 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 33F9QSSJDD;
 						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
 							com.apple.Maps.iOS = {
 								enabled = 1;
 							};
@@ -204,6 +348,12 @@
 					48D2ABAE1A80202900AAC8D6 = {
 						CreatedOnToolsVersion = 6.1.1;
 						TestTargetID = 48D2AB951A80202800AAC8D6;
+					};
+					48F96C9D1A84072A003ABF5B = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					48F96CAF1A84072A003ABF5B = {
+						CreatedOnToolsVersion = 6.2;
 					};
 				};
 			};
@@ -222,6 +372,8 @@
 			targets = (
 				48D2AB951A80202800AAC8D6 /* BlueZoneTraveler */,
 				48D2ABAE1A80202900AAC8D6 /* BlueZoneTravelerTests */,
+				48F96C9D1A84072A003ABF5B /* BlueZoneTraveler WatchKit Extension */,
+				48F96CAF1A84072A003ABF5B /* BlueZoneTraveler WatchKit App */,
 			);
 		};
 /* End PBXProject section */
@@ -242,6 +394,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48F96C9C1A84072A003ABF5B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48F96CAD1A84072A003ABF5B /* Images.xcassets in Resources */,
+				48F96CB11A84072B003ABF5B /* BlueZoneTraveler WatchKit App.app in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48F96CAE1A84072A003ABF5B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48F96CB91A84072B003ABF5B /* Interface.storyboard in Resources */,
+				48F96CBB1A84072B003ABF5B /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +440,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		48F96C9A1A84072A003ABF5B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48F96CA81A84072A003ABF5B /* NotificationController.m in Sources */,
+				48F96CA51A84072A003ABF5B /* InterfaceController.m in Sources */,
+				48F96CAB1A84072A003ABF5B /* GlanceController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -277,6 +457,16 @@
 			isa = PBXTargetDependency;
 			target = 48D2AB951A80202800AAC8D6 /* BlueZoneTraveler */;
 			targetProxy = 48D2ABB01A80202900AAC8D6 /* PBXContainerItemProxy */;
+		};
+		48F96CB31A84072B003ABF5B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 48F96CAF1A84072A003ABF5B /* BlueZoneTraveler WatchKit App */;
+			targetProxy = 48F96CB21A84072B003ABF5B /* PBXContainerItemProxy */;
+		};
+		48F96CBD1A84072B003ABF5B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 48F96C9D1A84072A003ABF5B /* BlueZoneTraveler WatchKit Extension */;
+			targetProxy = 48F96CBC1A84072B003ABF5B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -295,6 +485,14 @@
 				48D2ABA91A80202900AAC8D6 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		48F96CB71A84072B003ABF5B /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				48F96CB81A84072B003ABF5B /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -382,9 +580,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BlueZoneTraveler/BlueZoneTraveler.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = BlueZoneTraveler/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -392,9 +594,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BlueZoneTraveler/BlueZoneTraveler.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = BlueZoneTraveler/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -432,6 +638,66 @@
 			};
 			name = Release;
 		};
+		48F96CBF1A84072B003ABF5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "BlueZoneTraveler WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		48F96CC01A84072B003ABF5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				INFOPLIST_FILE = "BlueZoneTraveler WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		48F96CC11A84072B003ABF5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = BlueZoneTraveler_WatchKit_Extension;
+				INFOPLIST_FILE = "BlueZoneTraveler WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		48F96CC21A84072B003ABF5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COPY_PHASE_STRIP = NO;
+				IBSC_MODULE = BlueZoneTraveler_WatchKit_Extension;
+				INFOPLIST_FILE = "BlueZoneTraveler WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -461,6 +727,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		48F96CC31A84072B003ABF5B /* Build configuration list for PBXNativeTarget "BlueZoneTraveler WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48F96CC11A84072B003ABF5B /* Debug */,
+				48F96CC21A84072B003ABF5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		48F96CC41A84072B003ABF5B /* Build configuration list for PBXNativeTarget "BlueZoneTraveler WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48F96CBF1A84072B003ABF5B /* Debug */,
+				48F96CC01A84072B003ABF5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

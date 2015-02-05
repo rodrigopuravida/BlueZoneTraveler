@@ -28,6 +28,7 @@
 		48F96CB91A84072B003ABF5B /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48F96CB71A84072B003ABF5B /* Interface.storyboard */; };
 		48F96CBB1A84072B003ABF5B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48F96CBA1A84072B003ABF5B /* Images.xcassets */; };
 		48F96CBE1A84072B003ABF5B /* BlueZoneTraveler WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 48F96C9E1A84072A003ABF5B /* BlueZoneTraveler WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		48F96CC91A84097C003ABF5B /* ReminderRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F96CC81A84097C003ABF5B /* ReminderRowController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,8 @@
 		48F96CB81A84072B003ABF5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		48F96CBA1A84072B003ABF5B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		48F96CC61A840796003ABF5B /* BlueZoneTraveler.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = BlueZoneTraveler.entitlements; sourceTree = "<group>"; };
+		48F96CC71A84097C003ABF5B /* ReminderRowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReminderRowController.h; sourceTree = "<group>"; };
+		48F96CC81A84097C003ABF5B /* ReminderRowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReminderRowController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +220,8 @@
 				48F96CA61A84072A003ABF5B /* NotificationController.h */,
 				48F96CA71A84072A003ABF5B /* NotificationController.m */,
 				48F96CA91A84072A003ABF5B /* GlanceController.h */,
+				48F96CC71A84097C003ABF5B /* ReminderRowController.h */,
+				48F96CC81A84097C003ABF5B /* ReminderRowController.m */,
 				48F96CAA1A84072A003ABF5B /* GlanceController.m */,
 				48F96CAC1A84072A003ABF5B /* Images.xcassets */,
 				48F96CA01A84072A003ABF5B /* Supporting Files */,
@@ -444,6 +449,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48F96CC91A84097C003ABF5B /* ReminderRowController.m in Sources */,
 				48F96CA81A84072A003ABF5B /* NotificationController.m in Sources */,
 				48F96CA51A84072A003ABF5B /* InterfaceController.m in Sources */,
 				48F96CAB1A84072A003ABF5B /* GlanceController.m in Sources */,

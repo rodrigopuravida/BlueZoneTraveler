@@ -18,4 +18,4 @@ Add a visual map annotation wherever a reminder is added, using NSNotificationCe
 
 Thursday
 
-Create a WatchKit extension for your app, that will display the reminders on the watch when a boundary is crossed.
+Create a WatchKit extension for your app, that will display the regions that are being monitored. Use the watch kit map view to show where the region actually is.

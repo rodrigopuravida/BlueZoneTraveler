@@ -47,7 +47,24 @@
     [self.mapView setRegion:region animated:YES];
     
     [self.view addSubview:self.mapView];
+    
+    if ([CLLocationManager isMonitoringAvailableForClass:[CLCircularRegion class]]) {
+    
+    CLCircularRegion *japanCircularRegion = [[CLCircularRegion alloc] initWithCenter:coord radius:500 identifier:@"JapanRegion"];
+ 
+    [self.locationManager startMonitoringForRegion:japanCircularRegion];
+    // NSDictionary *userInfo = @{@"reminder" : region};
+    
+    //use this to return an array of monitored regions if needed
+    [self.locationManager.monitoredRegions allObjects];
+    //NSLog(self.locationManager.monitoredRegions);
+    
+    //you can pass into the dictionary other info also - but keep it light.
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"ReminderAdded" object:self userInfo:@{@"reminder" : japanCircularRegion}];
+    }
+    
 
+    
 }
 
 
@@ -70,7 +87,20 @@
     [self.mapView setRegion:region animated:YES];
     
     [self.view addSubview:self.mapView];
-
+    
+    if ([CLLocationManager isMonitoringAvailableForClass:[CLCircularRegion class]]) {
+    
+    CLCircularRegion *sardiniaCircularRegion = [[CLCircularRegion alloc] initWithCenter:coord radius:500 identifier:@"SardiniaRegion"];
+    
+    [self.locationManager startMonitoringForRegion:sardiniaCircularRegion];
+    // NSDictionary *userInfo = @{@"reminder" : region};
+    
+    //use this to return an array of monitored regions if needed
+    [self.locationManager.monitoredRegions allObjects];
+    
+    //you can pass into the dictionary other info also - but keep it light.
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"ReminderAdded" object:self userInfo:@{@"reminder" : sardiniaCircularRegion}];
+    }
 }
 
 - (IBAction)blueZone3Pressed:(id)sender {
@@ -93,6 +123,22 @@
     [self.mapView setRegion:region animated:YES];
     
     [self.view addSubview:self.mapView];
+    
+    if ([CLLocationManager isMonitoringAvailableForClass:[CLCircularRegion class]]) {
+    
+    CLCircularRegion *CostaRicaCircularRegion = [[CLCircularRegion alloc] initWithCenter:coord radius:500 identifier:@"CostaRicaRegion"];
+    
+    [self.locationManager startMonitoringForRegion:CostaRicaCircularRegion];
+    // NSDictionary *userInfo = @{@"reminder" : region};
+    
+    //use this to return an array of monitored regions if needed
+    [self.locationManager.monitoredRegions allObjects];
+    
+    //you can pass into the dictionary other info also - but keep it light.
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"ReminderAdded" object:self userInfo:@{@"reminder" : CostaRicaCircularRegion}];
+    }
+
+
     
     //MARK: END BLUE ZONE BUTTONS =================================================
 

@@ -7,9 +7,12 @@
 //
 
 #import "InterfaceController.h"
+#import "ReminderRowController.h"
+#import <CoreLocation/CoreLocation.h>
 
 
 @interface InterfaceController()
+@property (weak, nonatomic) IBOutlet WKInterfaceTable *table;
 
 @end
 
@@ -18,6 +21,25 @@
 
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
+    
+    CLLocationManager *locationManager = [CLLocationManager new];
+    NSSet *regions = locationManager.monitoredRegions;
+    NSArray *regionsArray = regions.allObjects;
+    
+    [self.table setNumberOfRows:regionsArray.count withRowType:@"ReminderRowController"];
+    NSInteger index = 0;
+    for (CLCircularRegion *item in regionsArray) {
+        ReminderRowController *rowController = [self.table rowControllerAtIndex:index];
+        [rowController.reminderLabel setText:item.identifier];
+        NSLog(item.identifier);
+        index++;
+    }
+    
+    
+//    for (NSString *item in regionsArray) {
+//        NSLog(item.description);
+//
+//    }
 
     // Configure interface objects here.
 }

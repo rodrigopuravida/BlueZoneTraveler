@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <WatchKit/WatchKit.h>
 
 @interface ReminderRowController : NSObject
+@property (weak, nonatomic) IBOutlet WKInterfaceLabel *reminderLabel;
 
 @end

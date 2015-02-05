@@ -62,9 +62,7 @@
     //you can pass into the dictionary other info also - but keep it light.
     [[NSNotificationCenter defaultCenter] postNotificationName:@"ReminderAdded" object:self userInfo:@{@"reminder" : japanCircularRegion}];
     }
-    
 
-    
 }
 
 

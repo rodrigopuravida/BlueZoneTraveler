@@ -23,7 +23,7 @@
     self.region = context;
     
     //miniMap
-    MKCoordinateRegion region = MKCoordinateRegionMake(self.region.center, MKCoordinateSpanMake(0.3, 0.3));
+    MKCoordinateRegion region = MKCoordinateRegionMake(self.region.center, MKCoordinateSpanMake(0.6, 0.6));
     [self.miniMap setRegion:region];
     
 }

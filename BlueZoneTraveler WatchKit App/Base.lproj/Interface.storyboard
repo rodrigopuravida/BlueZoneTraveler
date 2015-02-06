@@ -24,6 +24,7 @@
                                     </group>
                                     <connections>
                                         <outlet property="reminderLabel" destination="c8B-h9-29o" id="E1A-fb-O2t"/>
+                                        <segue destination="2mY-rJ-0wv" kind="push" id="1Ax-rM-KHq"/>
                                     </connections>
                                 </tableRow>
                             </items>
@@ -45,7 +46,7 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="385" y="318"/>
+            <point key="canvasLocation" x="334" y="318"/>
         </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="BOz-TT-tkC">

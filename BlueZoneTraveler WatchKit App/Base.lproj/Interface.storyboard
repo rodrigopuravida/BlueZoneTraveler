@@ -36,6 +36,17 @@
             </objects>
             <point key="canvasLocation" x="130" y="318"/>
         </scene>
+        <!--Interface Controller-->
+        <scene sceneID="HXt-Vy-fGq">
+            <objects>
+                <controller id="2mY-rJ-0wv">
+                    <items>
+                        <map height="100" alignment="left" id="F5M-fn-e3d"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="385" y="318"/>
+        </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="BOz-TT-tkC">
             <objects>

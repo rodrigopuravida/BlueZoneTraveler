@@ -34,12 +34,6 @@
         NSLog(item.identifier);
         index++;
     }
-    
-    
-//    for (NSString *item in regionsArray) {
-//        NSLog(item.description);
-//
-//    }
 
     // Configure interface objects here.
 }

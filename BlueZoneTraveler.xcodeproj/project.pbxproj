@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		487C7AF71A8169D6009C555A /* Tasks in Resources */ = {isa = PBXBuildFile; fileRef = 487C7AF61A8169D6009C555A /* Tasks */; };
+		48CBF3FE1A844FC6001D6EDB /* MiniMapInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48CBF3FD1A844FC6001D6EDB /* MiniMapInterfaceController.m */; };
 		48D2AB9C1A80202800AAC8D6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D2AB9B1A80202800AAC8D6 /* main.m */; };
 		48D2AB9F1A80202800AAC8D6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D2AB9E1A80202800AAC8D6 /* AppDelegate.m */; };
 		48D2ABA21A80202800AAC8D6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D2ABA11A80202800AAC8D6 /* ViewController.m */; };
@@ -71,6 +72,8 @@
 
 /* Begin PBXFileReference section */
 		487C7AF61A8169D6009C555A /* Tasks */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Tasks; sourceTree = "<group>"; };
+		48CBF3FC1A844FC6001D6EDB /* MiniMapInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MiniMapInterfaceController.h; path = ../MiniMapInterfaceController.h; sourceTree = "<group>"; };
+		48CBF3FD1A844FC6001D6EDB /* MiniMapInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MiniMapInterfaceController.m; path = ../MiniMapInterfaceController.m; sourceTree = "<group>"; };
 		48D2AB961A80202800AAC8D6 /* BlueZoneTraveler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlueZoneTraveler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48D2AB9A1A80202800AAC8D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48D2AB9B1A80202800AAC8D6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -217,6 +220,8 @@
 			children = (
 				48F96CA31A84072A003ABF5B /* InterfaceController.h */,
 				48F96CA41A84072A003ABF5B /* InterfaceController.m */,
+				48CBF3FC1A844FC6001D6EDB /* MiniMapInterfaceController.h */,
+				48CBF3FD1A844FC6001D6EDB /* MiniMapInterfaceController.m */,
 				48F96CA61A84072A003ABF5B /* NotificationController.h */,
 				48F96CA71A84072A003ABF5B /* NotificationController.m */,
 				48F96CA91A84072A003ABF5B /* GlanceController.h */,
@@ -453,6 +458,7 @@
 			files = (
 				48F96CC91A84097C003ABF5B /* ReminderRowController.m in Sources */,
 				48F96CA81A84072A003ABF5B /* NotificationController.m in Sources */,
+				48CBF3FE1A844FC6001D6EDB /* MiniMapInterfaceController.m in Sources */,
 				48F96CA51A84072A003ABF5B /* InterfaceController.m in Sources */,
 				48F96CAB1A84072A003ABF5B /* GlanceController.m in Sources */,
 			);

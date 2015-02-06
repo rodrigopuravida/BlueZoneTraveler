@@ -13,6 +13,7 @@
 
 @interface InterfaceController()
 @property (weak, nonatomic) IBOutlet WKInterfaceTable *table;
+@property (strong, nonatomic) NSArray *regionsArray;
 
 @end
 
@@ -24,11 +25,11 @@
     
     CLLocationManager *locationManager = [CLLocationManager new];
     NSSet *regions = locationManager.monitoredRegions;
-    NSArray *regionsArray = regions.allObjects;
+    self.regionsArray = regions.allObjects;
     
-    [self.table setNumberOfRows:regionsArray.count withRowType:@"ReminderRowController"];
+    [self.table setNumberOfRows:self.regionsArray.count withRowType:@"ReminderRowController"];
     NSInteger index = 0;
-    for (CLCircularRegion *item in regionsArray) {
+    for (CLCircularRegion *item in self.regionsArray) {
         ReminderRowController *rowController = [self.table rowControllerAtIndex:index];
         [rowController.reminderLabel setText:item.identifier];
         NSLog(item.identifier);
@@ -36,6 +37,10 @@
     }
 
     // Configure interface objects here.
+}
+
+-(id)contextForSegueWithIdentifier:(NSString *)segueIdentifier inTable:(WKInterfaceTable *)table rowIndex:(NSInteger)rowIndex {
+    return self.regionsArray[rowIndex];
 }
 
 - (void)willActivate {

@@ -37,13 +37,16 @@
             </objects>
             <point key="canvasLocation" x="130" y="318"/>
         </scene>
-        <!--Interface Controller-->
+        <!--Mini Map Interface Controller-->
         <scene sceneID="HXt-Vy-fGq">
             <objects>
-                <controller id="2mY-rJ-0wv">
+                <controller id="2mY-rJ-0wv" customClass="MiniMapInterfaceController">
                     <items>
                         <map height="100" alignment="left" id="F5M-fn-e3d"/>
                     </items>
+                    <connections>
+                        <outlet property="miniMap" destination="F5M-fn-e3d" id="myz-T3-ZMM"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="334" y="318"/>

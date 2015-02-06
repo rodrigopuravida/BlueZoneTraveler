@@ -747,6 +747,7 @@
 				48F96CC21A84072B003ABF5B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		48F96CC41A84072B003ABF5B /* Build configuration list for PBXNativeTarget "BlueZoneTraveler WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -755,6 +756,7 @@
 				48F96CC01A84072B003ABF5B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

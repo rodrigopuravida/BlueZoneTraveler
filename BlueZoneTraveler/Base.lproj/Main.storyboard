@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="7Bz-qb-Yg5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6750" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="7Bz-qb-Yg5">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6735"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -110,13 +110,31 @@
                                     <action selector="pressedAddReminderButton:" destination="TtD-bD-Xps" eventType="touchUpInside" id="mmj-D8-h6v"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Region Name:" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i63-t0-PRk">
+                                <rect key="frame" x="33" y="84" width="109" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Region Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sXH-e2-C6q">
+                                <rect key="frame" x="162" y="80" width="108.5" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Jt6-fc-Upg" firstAttribute="top" secondItem="IBQ-8R-zDd" secondAttribute="bottom" constant="188" id="8T5-M4-KkA"/>
                             <constraint firstAttribute="centerX" secondItem="Jt6-fc-Upg" secondAttribute="centerX" id="Afa-07-Svb"/>
+                            <constraint firstItem="i63-t0-PRk" firstAttribute="leading" secondItem="LIZ-Lu-5UR" secondAttribute="leadingMargin" constant="17" id="FUn-Zs-rAc"/>
+                            <constraint firstItem="i63-t0-PRk" firstAttribute="top" secondItem="IBQ-8R-zDd" secondAttribute="bottom" constant="20" id="P8a-gQ-NJf"/>
+                            <constraint firstItem="sXH-e2-C6q" firstAttribute="top" secondItem="IBQ-8R-zDd" secondAttribute="bottom" constant="16" id="eov-i5-JDI"/>
+                            <constraint firstItem="sXH-e2-C6q" firstAttribute="leading" secondItem="i63-t0-PRk" secondAttribute="trailing" constant="20" id="jaz-ld-oNp"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="regionNameTxt" destination="sXH-e2-C6q" id="4G7-Kq-RPm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JEC-EF-9vF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

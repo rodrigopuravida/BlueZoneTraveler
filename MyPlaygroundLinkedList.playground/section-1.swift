@@ -1,5 +1,6 @@
 import UIKit
 //Tips for delete by index by sunuan - github
+//Also added more functionality for learning and interviewing purposes
 //Using Generics for any data.  In this case defined as String on Test Cases section
 class Node<T> {
     var data:T? = nil

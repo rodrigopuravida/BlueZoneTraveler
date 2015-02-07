@@ -83,6 +83,7 @@ class LinkedList<T> {
 
 var listOfStrings:LinkedList<String> = LinkedList<String>()
 
+//TEST SECTION
 listOfStrings.add("Batman")
 listOfStrings.add("Gordon")
 listOfStrings.add("Joker")
@@ -91,4 +92,6 @@ listOfStrings.get(0)
 listOfStrings.get(1)
 listOfStrings.deleteByIndex(1)
 listOfStrings.deleteByIndex(0);
+//NOW Joker is the head and Riddler the Tail after removing our Superheroes
 listOfStrings.get(0)
+listOfStrings.get(1)
